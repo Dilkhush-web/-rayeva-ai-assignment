@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Rayeva AI Assignment</title>
+</head>
+
+<body>
+
+    <h2>AI Category Generator</h2>
+
+    <input id="name" placeholder="Product Name"><br><br>
+
+    <textarea id="desc" placeholder="Description"></textarea><br><br>
+
+    <button onclick="generate()">Generate</button>
+
+    <pre id="output"></pre>
+
+    <script>
+        async function generate() {
+
+            const res = await fetch("http://localhost:3000/generate", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    name: document.getElementById("name").value,
+                    desc: document.getElementById("desc").value
+                })
+            });
+
+            const data = await res.json();
+
+            document.getElementById("output").innerText =
+                JSON.stringify(data, null, 2);
+        }
+    </script>
+
+</body>
+
+</html>
