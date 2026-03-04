@@ -1,21 +1,29 @@
-# AI Product Category Generator
+# AI Auto Category & Tag Generator
 
-This project uses Node.js and OpenAI API to automatically generate:
+This project was developed as part of the Rayeva AI Internship Assignment.
 
-- Product Category
-- Sub Category
-- SEO Tags
-- Filters
+## Features
+- Automatic Product Category Generation
+- Sub-category Suggestions
+- SEO Tag Generation
+- Sustainability Filters
+- Structured JSON Output
 
-## Tech Used
+## Tech Stack
 - Node.js
 - Express.js
 - OpenAI API
 
 ## How to Run
+1. Install dependencies:
+   npm install
 
-1. npm install
-2. add API key in .env
-3. node server.js
+2. Add API key in .env file
 
-Server runs on http://localhost:3000
+3. Start server:
+   node server.js
+
+Server runs on port 3000.
+
+## Author
+Dilkhush Kumar
